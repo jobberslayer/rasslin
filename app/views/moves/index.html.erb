@@ -1,0 +1,63 @@
+<h1>Listing moves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Agility</th>
+      <th>Strength</th>
+      <th>Technical</th>
+      <th>Risk</th>
+      <th>Brawling</th>
+      <th>Durability</th>
+      <th>Body helper</th>
+      <th>Body opp</th>
+      <th>Injure</th>
+      <th>Move type</th>
+      <th>Control start pos</th>
+      <th>Opp start pos</th>
+      <th>Control success pos</th>
+      <th>Opp success pos</th>
+      <th>Control fail pos</th>
+      <th>Opp fail pos</th>
+      <th>Daze</th>
+      <th>Special</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @moves.each do |move| %>
+      <tr class="<%= cycle('even', 'odd') %>">
+        <td><%= move.name %></td>
+        <td><%= move.agility %></td>
+        <td><%= move.strength %></td>
+        <td><%= move.technical %></td>
+        <td><%= move.risk %></td>
+        <td><%= move.brawling %></td>
+        <td><%= move.durability %></td>
+        <td><%= move.body_helper.name %></td>
+        <td><%= move.body_opp.name %></td>
+        <td><%= move.injure %></td>
+        <td><%= move.move_type.name %></td>
+        <td><%= move.control_start_pos.name %></td>
+        <td><%= move.opp_start_pos.name %></td>
+        <td><%= move.control_success_pos.name %></td>
+        <td><%= move.opp_success_pos.name %></td>
+        <td><%= move.control_fail_pos.name %></td>
+        <td><%= move.opp_fail_pos.name %></td>
+        <td><%= move.daze %></td>
+        <td><%= move.special %></td>
+        <td><%= link_to 'Show', move %></td>
+        <td><%= link_to 'Edit', edit_move_path(move) %></td>
+        <td><%= link_to 'Destroy', move, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Move', new_move_path %>

@@ -1,0 +1,99 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @move.name %>
+</p>
+
+<p>
+  <strong>Agility:</strong>
+  <%= @move.agility %>
+</p>
+
+<p>
+  <strong>Strength:</strong>
+  <%= @move.strength %>
+</p>
+
+<p>
+  <strong>Technical:</strong>
+  <%= @move.technical %>
+</p>
+
+<p>
+  <strong>Risk:</strong>
+  <%= @move.risk %>
+</p>
+
+<p>
+  <strong>Brawling:</strong>
+  <%= @move.brawling %>
+</p>
+
+<p>
+  <strong>Durability:</strong>
+  <%= @move.durability %>
+</p>
+
+<p>
+  <strong>Body helper:</strong>
+  <%= @move.body_helper.name %>
+</p>
+
+<p>
+  <strong>Body opp:</strong>
+  <%= @move.body_opp.name %>
+</p>
+
+<p>
+  <strong>Injure:</strong>
+  <%= @move.injure %>
+</p>
+
+<p>
+  <strong>Move type:</strong>
+  <%= @move.move_type.name %>
+</p>
+
+<p>
+  <strong>Control start pos:</strong>
+  <%= @move.control_start_pos.name %>
+</p>
+
+<p>
+  <strong>Opp start pos:</strong>
+  <%= @move.opp_start_pos.name %>
+</p>
+
+<p>
+  <strong>Control success pos:</strong>
+  <%= @move.control_success_pos.name %>
+</p>
+
+<p>
+  <strong>Opp success pos:</strong>
+  <%= @move.opp_success_pos.name %>
+</p>
+
+<p>
+  <strong>Control fail pos:</strong>
+  <%= @move.control_fail_pos.name %>
+</p>
+
+<p>
+  <strong>Opp fail pos:</strong>
+  <%= @move.opp_fail_pos.name %>
+</p>
+
+<p>
+  <strong>Daze:</strong>
+  <%= @move.daze %>
+</p>
+
+<p>
+  <strong>Special:</strong>
+  <%= @move.special %>
+</p>
+
+<%= link_to 'Edit', edit_move_path(@move) %> |
+<%= link_to 'Back', moves_path %>

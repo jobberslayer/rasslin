@@ -1,0 +1,22 @@
+.floater {
+  float: left
+}
+
+.odd {
+  background-color: gray;
+  border-bottom: 2px solid black;
+}
+
+.even {
+  background-color:#CCCCCC;
+  border-bottom: 2px solid black;
+}
+
+table {
+  border:3px double black;
+}
+
+table th {
+  border: 1px solid black;
+}
+

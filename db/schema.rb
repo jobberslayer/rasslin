@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130716183610) do
+ActiveRecord::Schema.define(version: 20130718162422) do
 
   create_table "body_parts", force: true do |t|
     t.string   "name"
@@ -27,15 +27,15 @@ ActiveRecord::Schema.define(version: 20130716183610) do
 
   create_table "moves", force: true do |t|
     t.string   "name"
-    t.integer  "agility"
-    t.integer  "strength"
-    t.integer  "technical"
-    t.integer  "risk"
-    t.integer  "brawling"
-    t.integer  "durability"
+    t.integer  "agility",                default: 0
+    t.integer  "strength",               default: 0
+    t.integer  "technical",              default: 0
+    t.integer  "risk",                   default: 0
+    t.integer  "brawling",               default: 0
+    t.integer  "durability",             default: 0
     t.integer  "body_helper_id"
     t.integer  "body_opp_id"
-    t.integer  "injure"
+    t.integer  "injure",                 default: 0
     t.integer  "move_type_id"
     t.integer  "control_start_pos_id"
     t.integer  "opp_start_pos_id"
@@ -43,10 +43,11 @@ ActiveRecord::Schema.define(version: 20130716183610) do
     t.integer  "opp_success_pos_id"
     t.string   "control_fail_pos_id"
     t.integer  "opp_fail_pos_id"
-    t.integer  "daze"
+    t.integer  "daze",                   default: 0
     t.text     "special"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "target",                 default: 0
   end
 
   create_table "positions", force: true do |t|
